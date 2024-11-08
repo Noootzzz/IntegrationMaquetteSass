@@ -27,3 +27,102 @@
     align-items: center;
     gap: 1rem;
 }
+
+@mixin heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        
+        &__subtitle{
+            font-size: variables.$font-size * 2;
+            font-weight: 700;
+        }
+        &__small {
+            font-size: variables.$font-size * 1;
+            color: variables.$black;
+            font-weight: 500;
+        }
+    }
+
+    &__link {
+        @include btn-secondary(variables.$font-size, 1rem 2rem);
+    }
+}
+
+@mixin infos-buttons($align-items) {
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: $align-items;
+        width: 50%;
+        gap: 2rem;
+    }
+
+    &__title {
+        font-size: variables.$font-size * 4;
+        font-weight: 700;
+        text-wrap: nowrap;
+    }
+    &__subtitle {
+        font-size: variables.$font-size * 2.9;
+        font-weight: 500;
+    }
+    &__text {
+        font-weight: 500;
+        color: variables.$darkgray;
+        width: 80%;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__intro {
+        @include btn-secondary(variables.$font-size, 1rem 2rem);    
+
+        > img {
+            width: 20px;
+            border: 1px solid variables.$darkblue;
+            border-radius: variables.$radius;
+        }
+    }
+    
+    &__explore {
+        @include btn-primary(1rem 2rem);
+    }
+}
+
+// @mixin cards {    
+//     padding: variables.$global-padding;
+//     width: 100%;
+
+//     &__list {
+//         list-style: none;
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//         gap: 2rem;
+//         padding: 2rem 0 0 0;
+
+        
+//     }
+
+//     &__elt {
+//         box-shadow: 0px 2.39px 16.76px -1.2px #00000014;
+//         border-radius: 7px;
+//         padding: .5rem;
+//         width: 100%;
+
+//         > img {
+//             width: 100%;
+//             border-radius: 6px;
+//             margin-bottom: 1rem;
+//         }
+//     }
+// }

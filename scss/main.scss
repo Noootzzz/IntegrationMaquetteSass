@@ -14,14 +14,15 @@ body {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr) auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .home-section {
     background: variables.$gradient;
-    height: 100vh;
+    min-height: 100vh;
     padding: variables.$global-padding;
     display: grid;
     grid-template-columns: 1fr;
@@ -99,57 +100,15 @@ main {
         transform: translateX(15%);
     }
 
-    &__left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        width: 50%;
-        gap: 2rem;
-    }
-
     &__right {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         width: 50%;
     }
-
-    &__title {
-        font-size: variables.$font-size * 4;
-        font-weight: 700;
-        text-wrap: nowrap;
-    }
-    &__subtitle {
-        font-size: variables.$font-size * 2.9;
-        font-weight: 500;
-    }
-    &__text {
-        font-weight: 500;
-        color: variables.$darkgray;
-        width: 80%;
-    }
-
-    &__buttons {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__intro {
-        @include mixins.btn-secondary(variables.$font-size, 1rem 2rem);    
-
-        > img {
-            width: 20px;
-            border: 1px solid variables.$darkblue;
-            border-radius: variables.$radius;
-        }
-    }
     
-    &__explore {
-        @include mixins.btn-primary(1rem 2rem);
-    }
+    @include mixins.infos-buttons(flex-start);
+
 }
 
 .dogs-section {
@@ -157,34 +116,112 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-top: 4rem;  
     padding: variables.$global-padding;
-    padding-top: 4rem;
+    width: 100%;
 
-    &__heading {
+    &__list {
+        list-style: none;
+        display: grid;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0 0 0;
     }
-    &__title {
-        
-        &__subtitle{
-            font-size: variables.$font-size * 2;
-            font-weight: 700;
+
+    &__elt {
+        box-shadow: 0px 2.39px 16.76px -1.2px #00000014;
+        border-radius: 7px;
+        padding: .5rem;
+        width: 100%;
+
+        > img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 1rem;
         }
-        &__small {
-            font-size: variables.$font-size * 1;
-            color: variables.$black;
+    }
+    
+    &__infos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: .5rem;
+        padding: 0 1rem;
+        font-weight: 700;
+        color: variables.$black;
+
+
+
+        &__p-first {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
             font-weight: 500;
+            color: variables.$gray;
+
+            span {
+                font-weight: 700;
+            }
+
+            img {
+                width: 7px
+            }
         }
+
     }
 }
 
-// .dogs-section ul {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 2rem;
-//     padding: variables.$global-padding;
-//     background-color: variables.$lightestgray;
-// }
+.heading {
+    @include mixins.heading;
+}
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+    background: variables.$gradient;
+    border-radius: variables.$radius - 20px;
+    margin: variables.$global-padding;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-right: 2rem;
+
+    @include mixins.infos-buttons(flex-end);
+    
+}
+
+.dogs-articles {
+    width: 100%;
+    padding: variables.$global-padding;
+
+    padding: variables.$global-padding;
+    width: 100%;
+    
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0 0 0;
+
+        
+    }
+
+    &__elt {
+        box-shadow: 0px 2.39px 16.76px -1.2px #00000014;
+        border-radius: 7px;
+        padding: .5rem;
+        width: 100%;
+
+        > img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+    }
+}
