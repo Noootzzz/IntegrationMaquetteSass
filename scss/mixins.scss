@@ -1,0 +1,29 @@
+@use "variables";
+
+@mixin btn-primary ($padding) {
+    background-color: variables.$darkblue;
+    color: variables.$white;
+    padding: $padding;
+    border-radius: variables.$radius;
+    font-size: variables.$font-size;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid variables.$darkblue;
+}
+
+@mixin btn-secondary ($font-size, $padding) {
+    background-color: transparent;
+    border: 1px solid variables.$darkblue;
+    color: variables.$darkblue;
+    padding: $padding;
+    border-radius: variables.$radius;
+    font-size: $font-size;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
