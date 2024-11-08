@@ -1,5 +1,7 @@
 $darkblue: #003459;
 $monyellow: #F7DBA7;
+$gradient: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+
 
 $pinkred: #FF564F;
 $greenlight: #34C759;
@@ -13,3 +15,16 @@ $lightgray: #99A2A5;
 $lightergray: #CCD1D2;
 $lightestgray: #EBEEEF;
 $white: #FDFDFD;
+
+$global-padding: 1.5rem 8% 0rem 8%;
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-Bold.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Heavy.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Light.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Medium.ttf') format('truetype'),
+    url('../assets/fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
+$font: "Gilroy", sans-serif;

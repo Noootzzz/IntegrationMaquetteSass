@@ -1,14 +1,53 @@
 @use "variables";
 @use "mixins";
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../font/Gilroy-Regular.ttf') format('woff2');
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Gilroy";
+}
+
+body {
+    font-family: variables.$font;
+    color: variables.$darkblue;
+    background-color: variables.$white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr) auto;
+
+    .home-section {
+        background: variables.$gradient;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        padding: variables.$global-padding;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > img {
+                width: 10%;
+            }
+
+            .nav {
+                
+                &__list {
+                    list-style: none;
+                    display: flex;
+                    gap: 7rem;
+                }
+                &__link {
+                    text-decoration: none;
+                }
+                &__link {
+                    font-weight: 700;
+                    line-height: 14.36px;
+                    color: variables.$darkblue;
+                }
+            }
+        }
+    }
 }

@@ -1,12 +1,49 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("../font/Gilroy-Regular.ttf") format("woff2");
+  src: url("../assets/fonts/Gilroy-Bold.ttf") format("truetype"), url("../assets/fonts/Gilroy-Heavy.ttf") format("truetype"), url("../assets/fonts/Gilroy-Light.ttf") format("truetype"), url("../assets/fonts/Gilroy-Medium.ttf") format("truetype"), url("../assets/fonts/Gilroy-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy";
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #003459;
+  background-color: #FDFDFD;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr) auto;
+}
+body .home-section {
+  background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 1.5rem 8% 0rem 8%;
+}
+body .home-section header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .home-section header > img {
+  width: 10%;
+}
+body .home-section header .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 7rem;
+}
+body .home-section header .nav__link {
+  text-decoration: none;
+}
+body .home-section header .nav__link {
+  font-weight: 700;
+  line-height: 14.36px;
+  color: #003459;
 }
 
 /*# sourceMappingURL=style.css.map */
