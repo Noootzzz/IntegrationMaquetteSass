@@ -242,3 +242,58 @@ main {
         border-radius: variables.$radius;
     }
 }
+
+footer {
+    background: variables.$gradient;
+    width: 100%;
+    height: 20rem;
+    padding: variables.$global-padding;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+    background-color: variables.$darkblue;
+    border-radius: variables.$radius / 2;
+    padding: 2.5rem;
+    color: variables.$white;
+
+    &__subtitle {
+        font-size: variables.$font-size * 2;
+        font-weight: 700;
+    }
+
+    &__form {
+        background-color: variables.$white; 
+        border-radius: variables.$radius - 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: .7rem;
+        flex-grow: 1;
+    }
+
+    &__input {
+        border-radius: variables.$radius - 35px;
+        background-color: variables.$white;
+        padding: 1rem 5rem 1rem .5rem;
+        border: 1px solid variables.$lightgray;
+        flex-grow: 1;
+        
+
+        &::placeholder {
+            font-weight: 500;
+            color: variables.$lightgray;
+        }
+    }
+
+    &__button {
+        @include mixins.btn-primary(1rem 2.5rem);
+        border-radius: variables.$radius - 35px;
+        border: none;
+    }
+}
