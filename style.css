@@ -419,6 +419,7 @@ footer {
   background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
   width: 100%;
   padding: 1.5rem 8% 0rem 8%;
+  padding-top: 5rem;
 }
 
 .register {

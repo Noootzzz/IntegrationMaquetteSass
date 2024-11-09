@@ -247,7 +247,8 @@ main {
 footer {
     background: variables.$gradient;
     width: 100%;
-    padding: variables.$global-padding;
+    padding: variables.$global-padding; 
+    padding-top: 5rem;
 }
 
 .register {
