@@ -1,8 +1,10 @@
 @use "variables";
+@use "sass:color";
 
 @mixin btn-primary ($padding) {
     background-color: variables.$darkblue;
-    color: variables.$white;
+    //Condition pour la couleur du texte
+    color: if(color.channel(variables.$white, "lightness", $space: hsl) > 50%, variables.$white, variables.$darkblue);
     padding: $padding;
     border-radius: variables.$radius;
     font-size: variables.$font-size;
@@ -15,7 +17,8 @@
 @mixin btn-secondary ($font-size, $padding) {
     background-color: transparent;
     border: 1px solid variables.$darkblue;
-    color: variables.$darkblue;
+    //Condition pour la couleur du texte
+    color: if(color.channel(variables.$white, "lightness", $space: hsl) > 50%, variables.$darkblue, variables.$white);
     padding: $padding;
     border-radius: variables.$radius;
     font-size: $font-size;
