@@ -23,6 +23,7 @@ main {
 .home-section {
     background: variables.$gradient;
     padding: variables.$global-padding;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -115,8 +116,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-top: 4rem;  
     padding: variables.$global-padding;
+    padding-top: 4rem;  
     width: 100%;
 
     &__list {

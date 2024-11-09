@@ -69,6 +69,7 @@ main {
 .home-section {
   background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
   padding: 1.5rem 8% 0rem 8%;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -213,8 +214,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 4rem;
   padding: 1.5rem 8% 0rem 8%;
+  padding-top: 4rem;
   width: 100%;
 }
 .dogs-section__list {
@@ -278,6 +279,9 @@ main {
   font-weight: 500;
 }
 .heading__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: 1px solid #003459;
   color: #003459;
@@ -291,6 +295,9 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+.heading__link img {
+  width: 7px;
 }
 
 .cta-section {

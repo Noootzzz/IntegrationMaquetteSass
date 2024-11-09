@@ -48,7 +48,13 @@
     }
 
     &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include btn-secondary(variables.$font-size, 1rem 2rem);
+        img {
+            width: 7px;
+        }
     }
 }
 
