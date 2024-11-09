@@ -246,7 +246,6 @@ main {
 footer {
     background: variables.$gradient;
     width: 100%;
-    height: 20rem;
     padding: variables.$global-padding;
 }
 
@@ -295,5 +294,68 @@ footer {
         @include mixins.btn-primary(1rem 2.5rem);
         border-radius: variables.$radius - 35px;
         border: none;
+    }
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    color: variables.$black;
+    
+
+    &__page-links, &__social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        list-style: none;
+    }
+    &__social-links {
+        gap: 3rem;
+
+        li a img {
+            width: 25px;
+        }
+    }
+    &__page-links li a {
+        text-decoration: none;
+        color: variables.$black;
+        font-weight: 500;
+    }
+
+}
+
+hr {
+    width: 100%;
+    border: 1px solid variables.$lightergray;
+    margin: 0 0 2.5rem 0;
+}
+
+.footer-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: variables.$gray;
+    padding-bottom: 2rem;
+    font-size: variables.$font-size - 2px;
+
+    &__img {
+        width: 10%;
+    }
+
+    &__legals {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: variables.$gray;
+            font-weight: 500;
+        }
     }
 }
