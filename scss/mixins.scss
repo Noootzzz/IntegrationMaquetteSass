@@ -98,31 +98,3 @@
         @include btn-primary(1rem 2rem);
     }
 }
-
-// @mixin cards {    
-//     padding: variables.$global-padding;
-//     width: 100%;
-
-//     &__list {
-//         list-style: none;
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//         gap: 2rem;
-//         padding: 2rem 0 0 0;
-
-        
-//     }
-
-//     &__elt {
-//         box-shadow: 0px 2.39px 16.76px -1.2px #00000014;
-//         border-radius: 7px;
-//         padding: .5rem;
-//         width: 100%;
-
-//         > img {
-//             width: 100%;
-//             border-radius: 6px;
-//             margin-bottom: 1rem;
-//         }
-//     }
-// }

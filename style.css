@@ -68,7 +68,6 @@ main {
 
 .home-section {
   background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
-  min-height: 100vh;
   padding: 1.5rem 8% 0rem 8%;
   display: grid;
   grid-template-columns: 1fr;
@@ -369,6 +368,7 @@ main {
 .dogs-articles {
   width: 100%;
   padding: 1.5rem 8% 0rem 8%;
+  margin-bottom: 10rem;
   padding: 1.5rem 8% 0rem 8%;
   width: 100%;
 }
@@ -384,11 +384,28 @@ main {
   border-radius: 7px;
   padding: 0.5rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.7rem;
 }
 .dogs-articles__elt > img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 1rem;
+}
+.dogs-articles__elt small, .dogs-articles__elt h3, .dogs-articles__elt p {
+  margin-inline: 1rem;
+}
+.dogs-articles__elt p {
+  margin-bottom: 1rem;
+}
+.dogs-articles__small {
+  background-color: #00A7E7;
+  padding: 0.4rem 0.6rem 0.5rem 0.6rem;
+  color: #FDFDFD;
+  border-radius: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
