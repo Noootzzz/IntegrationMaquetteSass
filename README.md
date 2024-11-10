@@ -121,6 +121,10 @@ nav {
 
     &__title {
         color: black;
+
+        &--large {
+            font-size: 2em;
+        }
     }
     &__description {
         color: gray;
@@ -128,9 +132,6 @@ nav {
 
     &--blue {
         color: blue;
-    }
-    &--large {
-        font-size: 2em;
     }
 }
 ```
@@ -189,5 +190,50 @@ $element-color: if(color.channel($blue, "lightness", $space: hsl) > 50%, $black,
 .success {
     @extend .message;
     color: green;
+}
+```
+
+## Boucles
+
+### Les boucles servent à générer dynamiquement du CSS, surtout pour des éléments répétitifs ou des variations de style.
+
+### Boucle for :
+```
+// Générer des largeurs qui augmentent pour .col-1 à .col-12
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: (100% / 12) * $i;
+  }
+}
+```
+
+### Boucle Each : 
+```
+// Utiliser des couleurs à partir d'une liste de couleurs pour créer des boutons
+
+$colors: (primary: #3498db, success: #2ecc71, danger: #e74c3c);
+
+@each $name, $color in $colors {
+  .btn-#{$name} {
+    background-color: $color;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+}
+```
+
+### Boucle while :
+```
+// Générer des marges qui augmentent pour .margin-1 à .margin-5
+
+$i: 1;
+
+@while $i <= 5 {
+  .margin-#{$i} {
+    margin: $i * 10px;
+  }
+  $i: $i + 1;
 }
 ```
