@@ -16,8 +16,29 @@
 
 ### sass --watch styles/main.scss:styles/main.css
 
-
 ## Partials et Imports
 
 ### Nommer les fichiers qui vont ensuite être importés avec un _ devant : _exemple.scss
 ### Dans le main.scss : @use "exemple.scss"
+
+## Variables
+
+### Ecriture dans le _variables.scss : $background-color: red;
+### Dans le main.scss : background-color: variables.$background-color; (Le variables devant la variable est nécessaire ou non en fonction de la version de Sass.)
+
+
+## Imbrication
+
+### Dans le main.scss : 
+####    nav {
+####        display: flex;
+####        justify-content: center;
+####
+####        ul {
+####            list-style: none;
+####            
+####            a {
+####                text-decoration: none;
+####            }
+####        }
+####    }
