@@ -26,3 +26,12 @@
 ### Ecriture dans le _variables.scss : $background-color: red;
 ### Dans le main.scss : background-color: variables.$background-color; (Le "variables" devant la variable est nécessaire ou non en fonction de la version de Sass.)
 
+``` 
+nav {
+    display: flex;
+
+    ul {
+        list_style: none;
+    }
+}
+```
