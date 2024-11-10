@@ -24,21 +24,5 @@
 ## Variables
 
 ### Ecriture dans le _variables.scss : $background-color: red;
-### Dans le main.scss : background-color: variables.$background-color; (Le variables devant la variable est nécessaire ou non en fonction de la version de Sass.)
+### Dans le main.scss : background-color: variables.$background-color; (Le "variables" devant la variable est nécessaire ou non en fonction de la version de Sass.)
 
-
-## Imbrication
-
-### Dans le main.scss : 
-####    nav {
-####        display: flex;
-####        justify-content: center;
-####
-####        ul {
-####            list-style: none;
-####            
-####            a {
-####                text-decoration: none;
-####            }
-####        }
-####    }
